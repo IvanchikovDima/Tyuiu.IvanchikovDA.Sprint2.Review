@@ -12,7 +12,7 @@ namespace Tyuiu.IvanchikovDA.Sprint2.Review.Lib
         public bool CheckDotInShadedArea(double x, double y)
         {
             bool res;
-            if ((y <= x * x) && (y <= 2 - x))
+            if ((y <= x * x) && ((y <= 2 - x) && (y>=0) || (y >= 2 - x)) && (y<x*x))
             {
                 res = true;
             }
